@@ -11,6 +11,9 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    env:
+      PROJECT_NAME: my-item-stock-front
+      PROJECT_VERSION: 0.0.1-SNAPSHOT
 
     strategy:
       matrix:
@@ -19,10 +22,38 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
+
     - run: npm ci
+
     - run: npm run build --if-present
+
     - run: npm test
+
+    - name: Make zip file
+      run: zip -r $PROJECT_NAME-$PROJECT_VERSION.zip .
+
+    - name: Set AWS confidentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ap-northeast-2
+
+    - name: Upload Zip to S3
+      run: >
+        aws s3 cp
+        --region ap-northeast-2
+        $PROJECT_NAME-$PROJECT_VERSION.zip s3://my-item-stock
+
+    - name : Deploy from S3 with CodeDeploy
+        run : >
+          aws deploy create-deployment
+          --application-name my-item-stock
+          --deployment-config-name CodeDeployDefault.AllAtOnce
+          --deployment-group-name dg-my-item-stock-front
+          --s3-location bucket=my-item-stock,bundleType=zip,key=$PROJECT_NAME-$PROJECT_VERSION.zip
