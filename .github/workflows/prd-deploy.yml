@@ -35,7 +35,7 @@ jobs:
     - run: npm test
 
     - name: Make zip file
-      run: zip -r $PROJECT_NAME-$PROJECT_VERSION.zip .
+      run: zip -r $PROJECT_NAME-$PROJECT_VERSION.zip . -x ./node_modules/\* # node_modules는 제거
 
     - name: Set AWS confidentials
       uses: aws-actions/configure-aws-credentials@v1
