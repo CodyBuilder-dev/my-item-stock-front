@@ -1,17 +1,16 @@
 import React, {useEffect, useState} from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  const [message, setMessage] = useState("");
+  // const [message, setMessage] = useState("");
 
-  useEffect(()=> {
-    fetch('/api/v1/animals')
-        .then(response => response.text())
-        .then(message => {
-            setMessage(message);
-        });
-  },[])
+  // useEffect(()=> {
+  //   fetch('/api/v1/animals')
+  //       .then(response => response.text())
+  //       .then(message => {
+  //           setMessage(message);
+  //       });
+  // },[])
   return (
     <div>
     {/*<div className="App">*/}
