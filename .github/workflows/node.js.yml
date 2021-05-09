@@ -51,7 +51,7 @@ jobs:
         $PROJECT_NAME-$PROJECT_VERSION.zip s3://my-item-stock
 
     - name : Deploy from S3 with CodeDeploy
-        run : >
+      run : >
           aws deploy create-deployment
           --application-name my-item-stock
           --deployment-config-name CodeDeployDefault.AllAtOnce
