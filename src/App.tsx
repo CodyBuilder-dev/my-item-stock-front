@@ -8,6 +8,7 @@ import LifecycleEx6 from './R006_LifecycleEx';
 import LifecycleEx7 from './R007_LifecycleEx';
 import LifecycleEx8 from './R008_LifecycleEx';
 import Es6 from './R009_Es6'
+// import Variable from './R010_Variable';
 
 function App() {
   // const [message, setMessage] = useState("");
@@ -32,6 +33,7 @@ function App() {
         <LifecycleEx7 prop_value='FromApp.js'/>
         <LifecycleEx8 prop_value='FromApp.js'/>
         <Es6/>
+        {/*<Variable/>*/}
     </div>
   );
 }
