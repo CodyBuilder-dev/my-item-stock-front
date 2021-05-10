@@ -10,7 +10,7 @@ class R010_Variable extends Component {
     componentDidMount() {
         var varName = 'react';
         console.log('varName1 : ' + varName);
-        var varName = '무야호';
+        var varName = '무야호'; // @typescript-eslint/no-redeclare 발생
         console.log('varName2 : ' + varName);
 
         let letName = 'react';
