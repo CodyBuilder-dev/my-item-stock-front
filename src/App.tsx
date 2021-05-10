@@ -1,8 +1,12 @@
 import React from 'react';
 // import {useEffect, useState} from 'react';
+
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.css'
+
 // import Chapter1 from "./Chapter1";
 import Chapter2 from "./Chapter2"
+
 
 function App() {
   // const [message, setMessage] = useState("");

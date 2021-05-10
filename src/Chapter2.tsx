@@ -5,6 +5,11 @@ import PropsBoolean from './Chapter2/R019_PropsBoolean';
 import PropsNode from './Chapter2/R023_PropsNode';
 import ReactState from './Chapter2/R024_ReactState';
 import SetState from './Chapter2/R025_SetState';
+import FunctionComponent from './Chapter2/R030_FunctionComponent';
+import ReactHook from './Chapter2/R031_ReactHook'
+import Fragments from './Chapter2/R032_Fragments';
+import ReturnMap from './Chapter2/R033_ReturnMap';
+import ReactstrapAlerts from './Chapter2/R034_ReactstrapAlerts';
 
 class Chapter2 extends Component{
     render(){
@@ -15,7 +20,7 @@ class Chapter2 extends Component{
                     prototype={"키워드와 같은 이름의 prop도 상관없습니다"}
                     String="react"
                     Number={200}
-                    Boolean={1==1}
+                    Boolean={true}
                     Array={[0,1,8]}
                     ObjectJson={{react:"리액트", twohundered:"200"}}
                     Function={console.log("FunctionProps: function!")}
@@ -29,6 +34,11 @@ class Chapter2 extends Component{
                 </PropsNode>
                 <ReactState reactString = "react"/>
                 <SetState/>
+                <FunctionComponent contents="[THIS IS FunctionComponent]"/>
+                <ReactHook/>
+                <Fragments/>
+                <ReturnMap/>
+                <ReactstrapAlerts/>
             </div>
         )
     }
