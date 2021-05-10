@@ -13,6 +13,7 @@ class R007_LifecycleEx extends Component<Props,any> {
     constructor(props: any) {
         super(props);
         this.state = {};
+        console.log('THIS IS R007');
         console.log("1. constructor Call");
     }
 

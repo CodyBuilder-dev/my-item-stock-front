@@ -14,6 +14,7 @@ class R006_LifecycleEx extends Component<Props,any> {
     constructor(props: any) {
         super(props);
         this.state = {};
+        console.log('THIS IS R006');
         console.log("1. constructor Call");
     }
 

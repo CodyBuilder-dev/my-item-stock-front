@@ -4,6 +4,7 @@ class R009_Es6 extends Component {
     constructor(props) {
         super(props);
         this.state = {}
+        console.log('THIS IS R009');
     }
 
     componentDidMount() {

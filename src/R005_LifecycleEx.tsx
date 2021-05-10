@@ -5,6 +5,7 @@ class R005_LifecycleEx extends Component {
     constructor(props:any)  {
         super(props);
         this.state = {};
+        console.log('THIS IS R005');
         console.log('1. constructor Call');
     }
 
