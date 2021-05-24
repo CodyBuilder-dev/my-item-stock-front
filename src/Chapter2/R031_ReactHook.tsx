@@ -3,7 +3,7 @@ import React, {useEffect, useState} from 'react';
 function R031_ReactHook(props: any) {
     console.log("This is R031");
 
-    const [contents, setContents ] = useState('[THIS IS REACT]');
+    const [ contents, setContents ] = useState('[THIS IS REACT]');
     console.log(contents);
     console.log(props);
     useEffect(()=>{

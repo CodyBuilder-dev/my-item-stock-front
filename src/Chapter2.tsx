@@ -10,6 +10,13 @@ import ReactHook from './Chapter2/R031_ReactHook'
 import Fragments from './Chapter2/R032_Fragments';
 import ReturnMap from './Chapter2/R033_ReturnMap';
 import ReactstrapAlerts from './Chapter2/R034_ReactstrapAlerts';
+import ReactstrapBadges from "./Chapter2/R035_ReactstrapBadges";
+import ReactstrapBreadcrumbs from "./Chapter2/R036_ReactstrapBreadcumbs";
+import ReactstrapCarousel from "./Chapter2/R041_ReactstrapCarousel";
+import ReactstrapFade from "./Chapter2/R043_ReactstrapFade";
+import ReactstrapForm from "./Chapter2/R044_ReactstrapForm";
+import Sweetalert2Basic from "./Chapter2/R056_Sweetalert2Basic";
+
 
 class Chapter2 extends Component{
     render(){
@@ -39,6 +46,12 @@ class Chapter2 extends Component{
                 <Fragments/>
                 <ReturnMap/>
                 <ReactstrapAlerts/>
+                <ReactstrapBadges/>
+                <ReactstrapBreadcrumbs/>
+                <ReactstrapCarousel/>
+                <ReactstrapFade/>
+                <ReactstrapForm/>
+                <Sweetalert2Basic/>
             </div>
         )
     }
