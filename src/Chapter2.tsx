@@ -16,7 +16,13 @@ import ReactstrapCarousel from "./Chapter2/R041_ReactstrapCarousel";
 import ReactstrapFade from "./Chapter2/R043_ReactstrapFade";
 import ReactstrapForm from "./Chapter2/R044_ReactstrapForm";
 import Sweetalert2Basic from "./Chapter2/R056_Sweetalert2Basic";
-
+import FetchGet from "./Chapter2/R059_FetchGet"
+import FetchPost from "./Chapter2/R060_FetchPost"
+import AxiosGet from "./Chapter2/R061_AxiosGet"
+import AxiosPost from "./Chapter2/R062_AxiosPost"
+import CallbackFunc from "./Chapter2/R063_CallbackFunc"
+import PromiseThen from "./Chapter2/R064_PromiseThen"
+import PromiseCatch from "./Chapter2/R065_PromiseCatch"
 
 class Chapter2 extends Component{
     render(){
@@ -52,6 +58,13 @@ class Chapter2 extends Component{
                 <ReactstrapFade/>
                 <ReactstrapForm/>
                 <Sweetalert2Basic/>
+                <FetchGet/>
+                <FetchPost/>
+                <AxiosGet/>
+                <AxiosPost/>
+                <CallbackFunc/>
+                <PromiseThen/>
+                <PromiseCatch/>
             </div>
         )
     }
