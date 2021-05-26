@@ -1,36 +1,21 @@
 import React from 'react';
-// import {connect} from "react-redux";
 import {Route} from 'react-router-dom';
 
-// import './App.css';
+// static
 import './css/new.css';
 import 'bootstrap/dist/css/bootstrap.css'
 
-// import Chapter1 from "./Chapter1";
-// import Chapter2 from "./Chapter2"
-// import Chapter3 from "./Chapter3"
-// import StrAddButton from './StrAddButton';
-
-import floatingPopulationList from "./components/floating_population/floatingPopulationList";
-import rechartsSimpleLineChart from "./components/floating_population/rechartsSimpleLineChart";
-import FloatingPopulationScatterChart from "./components/floating_population/FloatingPopulationScatterChart";
+// component
+import SignUp from "./components/user/SignUp";
+import SignIn from "./components/user/SignIn";
 
 function App(props: any) {
   return (
     <div className="App">
-        <h1>Start React 200!</h1>
-          {/*<Chapter1/>*/}
-          {/*<Chapter2/>*/}
-          {/*<Chapter3/> */}
+        <h1>내돈내산 프로젝트</h1>
+        <Route path={"/user/sign-up"} component={SignUp} />
+        <Route path={"/user/sign-in"} component={SignIn} />
 
-        {/*<span>{props.store.getState().data.str}</span><br/>*/}
-        {/*<StrAddButton store={props.store}/>*/}
-
-        {/*<span>{props.str}</span><br/> */}
-        {/*<StrAddButton AppProp={"200"}/> */}
-        <Route path="/floatingPopulationList" component={floatingPopulationList} />
-        <Route path="/rechartsSimpleLineChart" component={rechartsSimpleLineChart} />
-        <Route path={"/floatingPopulationScatterChart"} component={FloatingPopulationScatterChart} />
     </div>
   );
 }
