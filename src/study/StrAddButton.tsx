@@ -1,6 +1,6 @@
 import React from "react";
 import {connect} from 'react-redux';
-import {add} from './actions';
+import {add} from '../actions';
 
 function StrAddButton(props: any) {
     // const addString = () => {

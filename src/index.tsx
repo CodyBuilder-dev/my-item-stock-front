@@ -1,42 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-//Redux Dependency
-import {createStore, applyMiddleware} from "redux";
-import reducers from './reducers';
+//static
+import './index.css';
 
-//React-Redux Dependency
+//React=Redux Dependency
+import {createStore} from "redux";
 import {Provider} from "react-redux";
+import reducers from './reducers';
 
 //React-router-dom Dependency
 import {BrowserRouter} from 'react-router-dom';
 
-// import * as serviceWorker from './serviceWorker';
+//Components
+import App from './App';
 
 
-const callMiddleWare = (store: any) => (nextMiddle: any) => (action: any) => {
-    console.log("1. reducer 실행 전");
-    console.log(`2. action.type : ${action.type}, store str : ${store.getState().data.str}`);
-    let result = nextMiddle(action);
-    console.log("3. reducer 실행 후");
-    console.log(`4. action.type : ${action.type}, store str : ${store.getState().data.str}`);
-    return result;
-}
-
-const store = createStore(reducers, applyMiddleware(callMiddleWare));
+const store = createStore(reducers);
 
 
 const listener = () => {
-    // This is Redux Code
-    // ReactDOM.render(
-    //     <App store={store}/>,
-    //     document.getElementById('root')
-    // )
-
-    // This is React-Redux Code
     ReactDOM.render(
         <Provider store={store}>
             <BrowserRouter>
