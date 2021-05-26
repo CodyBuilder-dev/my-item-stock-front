@@ -16,7 +16,7 @@ class Chapter3 extends Component{
     //todo : 다른 컴포넌트들과 <Route>를 함께 사용하면 화면에서는 어떻게 보일까?
     render(){
         return (
-        <div classname="Chapter3">
+        <div className="Chapter3">
             <ReactOnKey/>
             <ReactRef/>
             <ReactCurring/>

@@ -1,5 +1,5 @@
 import React from 'react';
-import {connect} from "react-redux";
+// import {connect} from "react-redux";
 import {Route} from 'react-router-dom';
 
 // import './App.css';
@@ -13,7 +13,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 
 import floatingPopulationList from "./components/floating_population/floatingPopulationList";
 import rechartsSimpleLineChart from "./components/floating_population/rechartsSimpleLineChart";
-
+import FloatingPopulationScatterChart from "./components/floating_population/FloatingPopulationScatterChart";
 
 function App(props: any) {
   return (
@@ -30,6 +30,7 @@ function App(props: any) {
         {/*<StrAddButton AppProp={"200"}/> */}
         <Route path="/floatingPopulationList" component={floatingPopulationList} />
         <Route path="/rechartsSimpleLineChart" component={rechartsSimpleLineChart} />
+        <Route path={"/floatingPopulationScatterChart"} component={FloatingPopulationScatterChart} />
     </div>
   );
 }

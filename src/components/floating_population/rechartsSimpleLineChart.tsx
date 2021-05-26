@@ -1,4 +1,5 @@
-import React from "react";
+import React,{memo} from "react";
+
 import {LineChart,Line,XAxis,YAxis,CartesianGrid,Tooltip,Legend} from 'recharts';
 
 const data = [
@@ -10,7 +11,8 @@ const data = [
 ];
 
 function rechartsSimpleLineChart (){
-    const jsfiddleIrl = 'https://jsfiddle.net/alidingling/sqjtetw0/';
+    //todo: static keyword는 뭘까?
+    // const jsfiddleIrl = 'https://jsfiddle.net/alidingling/sqjtetw0/';
 
     //todo : width=1000 안되는 이유?
     return (
@@ -29,4 +31,4 @@ function rechartsSimpleLineChart (){
     )
 }
 
-export default rechartsSimpleLineChart;
+export default memo(rechartsSimpleLineChart);

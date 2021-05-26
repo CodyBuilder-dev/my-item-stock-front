@@ -13,7 +13,8 @@ import {Provider} from "react-redux";
 
 //React-router-dom Dependency
 import {BrowserRouter} from 'react-router-dom';
-import * as serviceWorker from './serviceWorker';
+
+// import * as serviceWorker from './serviceWorker';
 
 
 const callMiddleWare = (store: any) => (nextMiddle: any) => (action: any) => {

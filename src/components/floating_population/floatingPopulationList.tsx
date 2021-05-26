@@ -2,13 +2,13 @@ import React from "react";
 
 function floatingPopulationList (){
     return (
-        <section class="sub_wrap">
-            <article class="s_cnt mp_pro_li ct1 mp_pro_li_admin">
-                <div class="li_top">
-                    <h2 class="s_tit1">서울시 유동인구 데이터 - 19년 11월</h2>
+        <section className="sub_wrap">
+            <article className="s_cnt mp_pro_li ct1 mp_pro_li_admin">
+                <div className="li_top">
+                    <h2 className="s_tit1">서울시 유동인구 데이터 - 19년 11월</h2>
                 </div>
-                <div class="list_cont list_cont_admin">
-                    <table class="table_ty1 fp_tlist">
+                <div className="list_cont list_cont_admin">
+                    <table className="table_ty1 fp_tlist">
                         <tr>
                             <th>Row</th>
                             <th>일자</th>
@@ -20,8 +20,8 @@ function floatingPopulationList (){
                             <th>유동인구수</th>
                         </tr>
                     </table>
-                    <table class="table_ty2 fp_tlist">
-                        <tr class="hidden_type">
+                    <table className="table_ty2 fp_tlist">
+                        <tr className="hidden_type">
                             <td>1</td>
                             <td>20191101</td>
                             <td>00</td>
@@ -31,7 +31,7 @@ function floatingPopulationList (){
                             <td>영등포구</td>
                             <td>32670</td>
                         </tr>
-                        <tr class="hidden_type">
+                        <tr className="hidden_type">
                             <td>1</td>
                             <td>20191101</td>
                             <td>00</td>
