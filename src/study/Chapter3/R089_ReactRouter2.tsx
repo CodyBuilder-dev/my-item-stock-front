@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React from "react";
 
 function R089_ReactRouter2() {
     return (
