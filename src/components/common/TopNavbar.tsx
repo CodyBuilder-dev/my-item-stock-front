@@ -1,15 +1,15 @@
-function TopNavbar () {
+function TopNavbar (props: any) {
 
-    const sendMenuType = function(e) {
-        console.log(e);
-        props.onCreate(e.value);
+    const sendMenuType = function(e: Object) {
+        // alert(e.toString());
+        props.onCreate(e);
     }
 
     return (
-        <form id='top-navbar' onSubmit={sendMenuType}>
-            <button type="submit" value="CategoryList">아이템목록</button>
-            <button type="submit" value="CategoryPieChart">통계보기</button>
-        </form>
+        <div>
+            <button onClick={() => sendMenuType("CategoryList")} >아이템목록</button>
+            <button onClick={() => sendMenuType("CategoryPieChart")} >통계보기</button>
+        </div>
     )
 }
 

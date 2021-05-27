@@ -4,22 +4,21 @@ import { useState } from 'react';
 import CategoryList from './item/CategoryList';
 import TopNavbar from './common/TopNavbar';
 import CategoryPieChart from './statistic/CategoryPieChart';
-
-
+import SignIn from "./user/SignIn";
 
 
 function Main(props: any){
     const [ menuType, setMenuType ] = useState("CategoryList")
 
     const getMenuType = function(clickedMenuType: any) {
-        console.log(clickedMenuType);
+        alert("클릭된 메뉴는 : " + clickedMenuType);
         setMenuType(clickedMenuType);
-        console.log(menuType);
+        alert(" 변경된 메뉴는 : "+ menuType);
     }
 
 
     if (props.isSignIn) {
-        switch(props.menuType) {
+        switch(menuType) {
             case "CategoryPieChart":
                 return (
                     <div id="main">
@@ -35,6 +34,12 @@ function Main(props: any){
                     </div>
                 )
         }
+    } else {
+        return (
+            <div id={"main"}>
+                <SignIn />
+            </div>
+        )
     }
 }
 export default Main;
