@@ -1,36 +1,40 @@
-import React, {useEffect, useState} from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+// import {Route} from 'react-router-dom';
 
-function App() {
-  const [message, setMessage] = useState("");
+// static
+import 'bootstrap/dist/css/bootstrap.css'
+import './css/new.css';
+import './css/common.css';
+import './css/item.css';
 
-  useEffect(()=> {
-    fetch('/api/v1/animals')
-        .then(response => response.text())
-        .then(message => {
-            setMessage(message);
-        });
-  },[])
+// component
+import Header from "./components/common/Header";
+import Footer from "./components/common/Footer";
+import Main from "./components/Main";
+
+function App(props: any) {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>{message}</p>
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <h1>내돈내산 프로젝트</h1>
+
+        <Header isSignIn={false}/>
+
+        <Main isSignIn={true} />
+
+        <Footer isSignIn={false} />
+
     </div>
   );
 }
+
+// let mapStateToProps = (state: any, props: any) => {
+//     console.log("Props from index.js : " + props.indexProp)
+//     return {
+//         str: state.data.str
+//     }
+// }
+
+// App = connect(mapStateToProps,null)(App);
+// export default connect(mapStateToProps,null)(App);
 
 export default App;
