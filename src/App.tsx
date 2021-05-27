@@ -5,6 +5,7 @@ import {Route} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.css'
 import './css/new.css';
 import './css/common.css';
+import './css/item.css';
 
 // component
 import Header from "./components/common/Header";
