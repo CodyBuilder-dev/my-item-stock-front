@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route} from 'react-router-dom';
+// import {Route} from 'react-router-dom';
 
 // static
 import 'bootstrap/dist/css/bootstrap.css'
@@ -11,8 +11,6 @@ import './css/item.css';
 import Header from "./components/common/Header";
 import Footer from "./components/common/Footer";
 import Main from "./components/Main";
-import SignUp from "./components/user/SignUp";
-import SignIn from "./components/user/SignIn";
 
 function App(props: any) {
   return (

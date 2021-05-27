@@ -1,7 +1,8 @@
 function TopNavbar () {
 
     const sendMenuType = function(e) {
-        props.onCreate(e.value)
+        console.log(e);
+        props.onCreate(e.value);
     }
 
     return (

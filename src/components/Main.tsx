@@ -1,8 +1,7 @@
 import { useState } from 'react';
-import {Route} from 'react-router-dom';
+// import {Route} from 'react-router-dom';
 
 import CategoryList from './item/CategoryList';
-import SignIn from './user/SignIn';
 import TopNavbar from './common/TopNavbar';
 import CategoryPieChart from './statistic/CategoryPieChart';
 
@@ -12,25 +11,27 @@ import CategoryPieChart from './statistic/CategoryPieChart';
 function Main(props: any){
     const [ menuType, setMenuType ] = useState("CategoryList")
 
-    const getMenuType = function(menuType: any) {
-        setMenuType(menuType);
+    const getMenuType = function(clickedMenuType: any) {
+        console.log(clickedMenuType);
+        setMenuType(clickedMenuType);
+        console.log(menuType);
     }
 
 
     if (props.isSignIn) {
         switch(props.menuType) {
-            case "CategoryList":
-                return (
-                    <div id="main">
-                       <TopNavbar onCreate= {getMenuType} />
-                       <CategoryList  />
-                    </div>
-                )
             case "CategoryPieChart":
                 return (
                     <div id="main">
                        <TopNavbar onCreate={getMenuType} />
                        <CategoryPieChart />
+                    </div>
+                )
+            default:
+                return (
+                    <div id="main">
+                       <TopNavbar onCreate= {getMenuType} />
+                       <CategoryList />
                     </div>
                 )
         }
