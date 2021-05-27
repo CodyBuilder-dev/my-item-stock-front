@@ -2,10 +2,14 @@ import React from 'react';
 import {Route} from 'react-router-dom';
 
 // static
-import './css/new.css';
 import 'bootstrap/dist/css/bootstrap.css'
+import './css/new.css';
+import './css/common.css';
 
 // component
+import Header from "./components/common/Header";
+import Footer from "./components/common/Footer";
+import Main from "./components/Main";
 import SignUp from "./components/user/SignUp";
 import SignIn from "./components/user/SignIn";
 
@@ -13,8 +17,12 @@ function App(props: any) {
   return (
     <div className="App">
         <h1>내돈내산 프로젝트</h1>
-        <Route path={"/user/sign-up"} component={SignUp} />
-        <Route path={"/user/sign-in"} component={SignIn} />
+
+        <Header isSignIn={false}/>
+
+        <Main isSignIn={true} />
+
+        <Footer isSignIn={false} />
 
     </div>
   );
