@@ -4,10 +4,6 @@ const categories:string[] = [];
 for (var i = 1; i <6; ++i)
     categories.push("카테고리"+i)
 
-const isArrivedBottom = function() {
-    return;
-}
-
 const printCurrentPosition = function() {
     console.log(window.scrollY);
 }
