@@ -11,11 +11,11 @@ import {Provider} from "react-redux";
 import reducers from './reducers';
 
 //React-router-dom Dependency
-import {BrowserRouter} from 'react-router-dom';
+import {BrowserRouter, Route} from 'react-router-dom';
 
 //Components
 import App from './App';
-
+import MainCarousel from "./components/MainCarousel";
 
 const store = createStore(reducers);
 
@@ -24,7 +24,8 @@ const listener = () => {
     ReactDOM.render(
         <Provider store={store}>
             <BrowserRouter>
-                <App indexProp={"react"}/>
+                <MainCarousel />
+                <Route path="/main" component={App} />
             </BrowserRouter>
         </Provider>,
         document.getElementById('root')
