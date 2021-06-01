@@ -1,0 +1,9 @@
+.carousel-item {
+    width: 1024px;
+    height: 716px;
+}
+.carousel-img {
+    display: block;
+    position: absolute;
+    transition: opacity 1s ease-in-out;
+}

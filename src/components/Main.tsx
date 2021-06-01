@@ -4,8 +4,7 @@ import { useState } from 'react';
 import CategoryList from './item/CategoryList';
 import TopNavbar from './common/TopNavbar';
 import CategoryPieChart from './statistic/CategoryPieChart';
-
-
+import SignIn from "./user/SignIn";
 
 
 function Main(props: any){
@@ -35,6 +34,12 @@ function Main(props: any){
                     </div>
                 )
         }
+    } else {
+        return (
+            <div id={"main"}>
+                <SignIn />
+            </div>
+        )
     }
 }
 export default Main;
