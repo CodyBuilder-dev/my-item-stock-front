@@ -18,7 +18,7 @@ function Main(props: any){
 
 
     if (props.isSignIn) {
-        switch(props.menuType) {
+        switch(menuType) {
             case "CategoryPieChart":
                 return (
                     <div id="main">

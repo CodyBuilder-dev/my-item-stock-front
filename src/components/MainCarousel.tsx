@@ -65,15 +65,22 @@ function MainCarousel() {
         );
     });
 
-    return <Carousel activeIndex={activeIndex}
-                    next={next}
-                    previous={previous}
-                    slide={true}>
-        <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
-        {slides}
-        <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
-        <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
-    </Carousel>
+    return (
+        <div id={"main-carousel"}>
+            <Carousel activeIndex={activeIndex}
+                      next={next}
+                      previous={previous}
+                      slide={true}>
+                <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={goToIndex} />
+                {slides}
+                <CarouselControl direction="prev" directionText="Previous" onClickHandler={previous} />
+                <CarouselControl direction="next" directionText="Next" onClickHandler={next} />
+            </Carousel>
+            <a href={"/main"}>
+                <button>메인 페이지로</button>
+            </a>
+        </div>
+    )
 }
 
 export default MainCarousel;

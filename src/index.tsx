@@ -24,7 +24,7 @@ const listener = () => {
     ReactDOM.render(
         <Provider store={store}>
             <BrowserRouter>
-                <MainCarousel />
+                <Route exact path="/" component={MainCarousel} />
                 <Route path="/main" component={App} />
             </BrowserRouter>
         </Provider>,
