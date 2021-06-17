@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
 
+
 //static
 import './index.css';
 
@@ -16,6 +17,7 @@ import {BrowserRouter, Route} from 'react-router-dom';
 //Components
 import App from './App';
 import MainCarousel from "./components/MainCarousel";
+import SignUp from "./components/user/SignUp";
 
 const store = createStore(reducers);
 
@@ -26,6 +28,7 @@ const listener = () => {
             <BrowserRouter>
                 <Route exact path="/" component={MainCarousel} />
                 <Route path="/main" component={App} />
+                <Route path={"/signup"} component={SignUp} />
             </BrowserRouter>
         </Provider>,
         document.getElementById('root')

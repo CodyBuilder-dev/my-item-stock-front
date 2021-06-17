@@ -17,11 +17,11 @@ function App(props: any) {
     <div className="App">
         <h1>내돈내산 프로젝트</h1>
 
-        <Header isSignIn={false}/>
+        <Header/>
 
-        <Main isSignIn={true} />
+        <Main/>
 
-        <Footer isSignIn={false} />
+        <Footer/>
 
     </div>
   );
